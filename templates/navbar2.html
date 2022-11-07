@@ -1,0 +1,18 @@
+<a href="{% url 'jet:index' %}"><h1>THIS IS A NAVBAR</a></h1>
+
+{% if user.is_authenticated %}
+Hello {{user.email}}....
+<a href="{% url 'users:logout' %}">SignOut</a>
+<hr>
+
+<form method="GET" action="{% url 'jet:index' %}">
+    <input type="text" name="q" placeholder="Serach Room..." />
+
+</form>
+
+{% else %}
+<a href="{% url 'users:login' %}">Sign In</a> -- <a href="{% url 'users:register' %}">Sign Up</a> <br>
+
+{% endif %}
+
+<hr>

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>THIS IS THE LOG IN PAGE</h1>
+
+<div>
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        <input type="text" name="email" placeholder="Email">
+        <input type="password" name="password" id="">
+
+
+        <input type="submit" value="Signin" id="">
+    </form>
+
+</div>
+
+
+{% endblock content %}
